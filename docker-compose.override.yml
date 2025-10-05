@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  worker:
+    build:
+      context: ./worker
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/lotwise
+      - KAFKA_BROKERS=ltp-kafka-1:9092
+      - KAFKA_TOPIC=trades
+      - GROUP_ID=lotwise-worker-group
+    depends_on:
+      - kafka
+      - postgres
