@@ -1,6 +1,5 @@
 # Lotwise Portfolio Tracker -
 
-This archive contains a full project you can run locally in VSCode.
 
 Structure:
 - backend/ (Express API that publishes trades to Kafka)
